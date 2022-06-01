@@ -13,6 +13,8 @@ public class HelloController {
         welcomeText.setText("Welcome to JavaFX Application!");
     }
 
+    public Label lbFile;
+    
     public void btnOpenFileAction(ActionEvent actionEvent) {
     }
 }
