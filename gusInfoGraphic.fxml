@@ -10,8 +10,11 @@
       <Label fx:id="lbFile" text="Proszę wczytać plik..." translateX="222.0" translateY="74.0" />
       <ListView fx:id="lstInfografiki" layoutX="41.0" layoutY="150.0" prefHeight="388.0" prefWidth="346.0" />
       <TextField fx:id="txtAdresStrony" layoutX="41.0" layoutY="590.0" prefHeight="25.0" prefWidth="534.0" />
-      <ImageView fitHeight="302.0" fitWidth="357.0" layoutX="403.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="274.0" fitWidth="346.0" layoutX="414.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true" />
       <Button fx:id="btnPokazInfografike" layoutX="662.0" layoutY="526.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="88.0" text="Pokaż" />
-      <Button fx:id="btnPrzejdzDoStrony" layoutX="610.0" layoutY="590.0" mnemonicParsing="false" text="Załaduj" />
+      <Button fx:id="btnPrzejdzDoStrony" layoutX="610.0" layoutY="590.0" mnemonicParsing="false" onAction="#btnZaladujStrone" text="Załaduj" />
+      <Label layoutX="47.0" layoutY="127.0" text="Infografiki" />
+      <Label layoutX="430.0" layoutY="201.0" text="Miniaturka" />
+      <Label layoutX="41.0" layoutY="573.0" text="Adres strony" />
    </children>
 </AnchorPane>
