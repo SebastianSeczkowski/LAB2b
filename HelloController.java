@@ -10,8 +10,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.stage.FileChooser;
 
+import javax.swing.*;
 import java.io.File;
 
 public class HelloController {
@@ -43,11 +45,15 @@ public class HelloController {
                     @Override
                     public void changed(ObservableValue<? extends Number> observableValue, Number number, Number t1) {
                         int index = t1.intValue();
+                        ImageIcon imgMiniaturka;
                         if (index != -1) {
                             txtAdresStrony.setText(igList.infografiki.get(index).adresStrony);
+                            Image image = new Image(igList.infografiki.get(index).adresMiniaturki);
+                            imgMiniaturka.setImage(image);
                         }
                         else {
                             txtAdresStrony.setText("");
+                            imgMiniaturka.setImage(null);
                         }
                     }
                 }
