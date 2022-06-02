@@ -38,7 +38,7 @@ public class HelloController {
             igList = new GusInfoGraphicList(file.getAbsolutePath());
             lbFile.setText(file.getAbsolutePath());
             for (Infografika ig: igList.infografiki) tytuly.add(ig.tytul);
-            lstInfografiki.setItems(tytuly)
+            lstInfografiki.setItems(tytuly);
         }
         else {
             lbFile.setText("Proszę wczytać plik ...");
