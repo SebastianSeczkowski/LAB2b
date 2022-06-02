@@ -14,6 +14,7 @@ import javafx.scene.image.Image;
 import javafx.stage.FileChooser;
 
 import javax.swing.*;
+import java.applet.AppletContext;
 import java.io.File;
 
 public class HelloController {
@@ -47,6 +48,7 @@ public class HelloController {
                         int index = t1.intValue();
                         ImageIcon imgMiniaturka;
                         if (index != -1) {
+                            selfInfografika = igList.infografiki.get(index);
                             txtAdresStrony.setText(igList.infografiki.get(index).adresStrony);
                             Image image = new Image(igList.infografiki.get(index).adresMiniaturki);
                             imgMiniaturka.setImage(image);
@@ -54,6 +56,7 @@ public class HelloController {
                         else {
                             txtAdresStrony.setText("");
                             imgMiniaturka.setImage(null);
+                            selfInfografika = null;
                         }
                     }
                 }
@@ -72,5 +75,12 @@ public class HelloController {
         else {
             lbFile.setText("Proszę wczytać plik ...");
         }
+    }
+
+    public void btnZaladujStrone(ActionEvent actionEvent) {
+        boolean selfInfografika;
+        AppletContext hostServices;
+        if (selfInfografika != null)
+            hostServices.showDocument(selfInfografika.AdresStrony);
     }
 }
