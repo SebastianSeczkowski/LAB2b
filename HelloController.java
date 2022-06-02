@@ -1,5 +1,7 @@
 package pl.lublin.wsei.java.cwiczenia;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -34,6 +36,23 @@ public class HelloController {
 
     public void initialize() {
         fileChooser.getExtensionFilters().add(xmlFilter);
+
+        lstInfografiki.getSelectionModel().selectedIndexProperty().addListener(
+
+                new ChangeListener<Number>() {
+                    @Override
+                    public void changed(ObservableValue<? extends Number> observableValue, Number number, Number t1) {
+                        int index = t1.intValue();
+                        if (index != -1) {
+                            txtAdresStrony.setText(igList.infografiki.get(index).adresStrony);
+                        }
+                        else {
+                            txtAdresStrony.setText("");
+                        }
+                    }
+                }
+        );
+
     }
 
     public void btnOpenFileAction(ActionEvent actionEvent) {
