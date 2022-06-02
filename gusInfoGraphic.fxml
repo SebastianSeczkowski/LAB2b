@@ -7,5 +7,6 @@
    <children>
       <Button mnemonicParsing="false" onAction="#btnOpenFileAction" text="Otwórz plik" textFill="RED" translateY="70.0" AnchorPane.rightAnchor="676.0" AnchorPane.topAnchor="0.0" />
       <Label fx:id="lbFile" text="Proszę wczytać plik..." translateX="222.0" translateY="74.0" />
+      <ListView fx:id="lstInfografiki" layoutX="41.0" layoutY="150.0" prefHeight="388.0" prefWidth="346.0" />
    </children>
 </AnchorPane>
